@@ -24,3 +24,25 @@ git
 
 
 
+Modification d'un commit plus ancien sans la perte de l'historique recent
+identifier le commit a modifier
+git log --oneline
+
+git rebase -i 
+
+git rebase -i iiiiii~1
+
+Remplacez pick par edit devant l'ancien commit à modifier :
+ 
+git add . 
+
+git commit --amend
+
+git rebase --continue
+
+
+Traitement d'un conflit dans un fichier et dans un repos
+=>
+Un fichier modifié sur la meme ligne par Fabi et Amadou 
+=>
+Un fichier a été supprimé par fatou  et modifié par Amadou
